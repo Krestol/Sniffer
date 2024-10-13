@@ -42,7 +42,7 @@ class TunnelManager {
                     tpp.providerBundleIdentifier = "zapcannon87.TestSZ.PacketTunnel"
                     tpp.serverAddress = "TestSZ"
                 #else
-                    tpp.providerBundleIdentifier = "zapcannon87.Sniffer.PacketTunnel"
+                    tpp.providerBundleIdentifier = "Krestol.Sniffer.PacketTunnel"
                     tpp.serverAddress = "Sniffer"
                 #endif
                 let newTpm = NETunnelProviderManager()

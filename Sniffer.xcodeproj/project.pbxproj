@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929E01642CBC29CC003F75CD /* ZPTCPIPStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BAE1501F653FA200A349CA /* ZPTCPIPStack.framework */; };
+		929E01652CBC29CC003F75CD /* ZPTCPIPStack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3BAE1501F653FA200A349CA /* ZPTCPIPStack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		929E01672CBC29CD003F75CD /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D352402A1F4BE259006656F0 /* CocoaAsyncSocket.framework */; };
+		929E01682CBC29CD003F75CD /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D352402A1F4BE259006656F0 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D321A2A61F63E26D005F447F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D321A2A51F63E26D005F447F /* NetworkExtension.framework */; };
 		D321A2A71F63E285005F447F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D321A2A51F63E26D005F447F /* NetworkExtension.framework */; };
 		D35240041F4BD090006656F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35240031F4BD090006656F0 /* AppDelegate.swift */; };
@@ -16,7 +20,6 @@
 		D352400E1F4BD090006656F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D352400C1F4BD090006656F0 /* LaunchScreen.storyboard */; };
 		D35240221F4BD0E5006656F0 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D35240191F4BD0E5006656F0 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D35240281F4BD160006656F0 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35240271F4BD160006656F0 /* PacketTunnelProvider.swift */; };
-		D352402C1F4BE277006656F0 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D352402A1F4BE259006656F0 /* CocoaAsyncSocket.framework */; };
 		D35240311F4BE7B6006656F0 /* HTTPProxyServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35240301F4BE7B6006656F0 /* HTTPProxyServer.swift */; };
 		D35240331F4BECE8006656F0 /* HTTPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35240321F4BECE8006656F0 /* HTTPConnection.swift */; };
 		D35240391F4D3091006656F0 /* TCPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35240371F4D3091006656F0 /* TCPConnection.swift */; };
@@ -157,6 +160,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		929E01612CBC297E003F75CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3523FF81F4BD090006656F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3BAE14F1F653FA200A349CA;
+			remoteInfo = ZPTCPIPStack;
+		};
 		D35240201F4BD0E5006656F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3523FF81F4BD090006656F0 /* Project object */;
@@ -174,6 +184,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		929E01662CBC29CC003F75CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				929E01682CBC29CD003F75CD /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				929E01652CBC29CC003F75CD /* ZPTCPIPStack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D35240261F4BD0E5006656F0 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +221,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		929E015E2CBC1EA2003F75CD /* Sniffer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sniffer.entitlements; sourceTree = "<group>"; };
 		D321A2A51F63E26D005F447F /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		D35240001F4BD090006656F0 /* Sniffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sniffer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35240031F4BD090006656F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -364,8 +387,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929E01672CBC29CD003F75CD /* CocoaAsyncSocket.framework in Frameworks */,
 				D321A2A71F63E285005F447F /* NetworkExtension.framework in Frameworks */,
-				D352402C1F4BE277006656F0 /* CocoaAsyncSocket.framework in Frameworks */,
+				929E01642CBC29CC003F75CD /* ZPTCPIPStack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +427,7 @@
 		D35240021F4BD090006656F0 /* Sniffer */ = {
 			isa = PBXGroup;
 			children = (
+				929E015E2CBC1EA2003F75CD /* Sniffer.entitlements */,
 				D35240031F4BD090006656F0 /* AppDelegate.swift */,
 				D35240051F4BD090006656F0 /* ViewController.swift */,
 				D39DFBB41F5BEEB90067F454 /* SessionsViewController.swift */,
@@ -803,10 +828,12 @@
 				D35240151F4BD0E5006656F0 /* Sources */,
 				D35240161F4BD0E5006656F0 /* Frameworks */,
 				D35240171F4BD0E5006656F0 /* Resources */,
+				929E01662CBC29CC003F75CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				929E01622CBC297E003F75CD /* PBXTargetDependency */,
 			);
 			name = PacketTunnel;
 			productName = PacketTunnel;
@@ -843,18 +870,18 @@
 				TargetAttributes = {
 					D3523FFF1F4BD090006656F0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7SAYZHVU5H;
+						DevelopmentTeam = 8HQKQN9ARU;
 						ProvisioningStyle = Automatic;
 					};
 					D35240181F4BD0E5006656F0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7SAYZHVU5H;
+						DevelopmentTeam = 8HQKQN9ARU;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D3BAE14F1F653FA200A349CA = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7SAYZHVU5H;
+						DevelopmentTeam = 8HQKQN9ARU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -864,6 +891,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -920,7 +948,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -997,6 +1026,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		929E01622CBC297E003F75CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3BAE14F1F653FA200A349CA /* ZPTCPIPStack */;
+			targetProxy = 929E01612CBC297E003F75CD /* PBXContainerItemProxy */;
+		};
 		D35240211F4BD0E5006656F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D35240181F4BD0E5006656F0 /* PacketTunnel */;
@@ -1129,16 +1163,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				CODE_SIGN_ENTITLEMENTS = Sniffer/Sniffer.entitlements;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sniffer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.Sniffer;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.Sniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1147,16 +1183,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				CODE_SIGN_ENTITLEMENTS = Sniffer/Sniffer.entitlements;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sniffer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.Sniffer;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.Sniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1165,18 +1203,19 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.Sniffer.PacketTunnel;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.Sniffer.PacketTunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1185,17 +1224,18 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.Sniffer.PacketTunnel;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.Sniffer.PacketTunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1206,14 +1246,15 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ZPTCPIPStack/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.ZPTCPIPStack;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.ZPTCPIPStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Checkouts/ZPTCPIPStack/ZPTCPIPStack/lwIP/include";
@@ -1229,14 +1270,15 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7SAYZHVU5H;
+				DEVELOPMENT_TEAM = 8HQKQN9ARU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ZPTCPIPStack/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zapcannon87.ZPTCPIPStack;
+				PRODUCT_BUNDLE_IDENTIFIER = Krestol.ZPTCPIPStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Checkouts/ZPTCPIPStack/ZPTCPIPStack/lwIP/include";
@@ -1282,6 +1324,7 @@
 				D3BAE15B1F653FA200A349CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

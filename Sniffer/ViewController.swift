@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 session.stopTunnel()
             } else if session.status == .disconnected {
                 do {
-                    try session.startTunnel(options: nil)
+                    try session.startVPNTunnel()
                 } catch {
                     assertionFailure("\(error)")
                 }
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func vpnStatusDidChange() {
+    @objc func vpnStatusDidChange() {
         guard let tpm = TunnelManager.tpm else {
             return
         }
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         )
     }
     
-    func vpnConfigurationChange() {
+    @objc func vpnConfigurationChange() {
         guard let tpm = TunnelManager.tpm else {
             return
         }
